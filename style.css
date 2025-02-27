@@ -1,419 +1,207 @@
-
-:root {
-    --goonify-color: #1FD75F;
-    --footer-height: 40px;
-}
-
-html, body, * {
-    -webkit-app-region: drag;
-    -webkit-user-select: none;
-    user-select: none;
-    cursor: default;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    box-sizing: border-box;
-    margin: 0px;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    font-family: "Gotham SSm A", "Gotham SSm B", "Helvatica Neue", Helvetica;
-    max-height: 100vh;
-    height: 100vh;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.left {
-    height: 100%;
-    background-color: black;
-    position: relative;
+.sidebar {
     width: 300px;
+    background: #030303;
+    position: fixed;
+    top: 0;
     left: 0;
     bottom: 0;
-    top: 0;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
 }
 
-.menu {
-    display: flex;
-    flex-direction: row;
-    position: relative;
+.sidebar-nav {
+    background: #111111;
+    border-radius: 10px;
+    padding: 20px 10px;
+    margin-bottom: 10px;
 }
 
-.gray-filtered {
-    filter: invert(0.5) sepia(70) saturate(0) hue-rotate(0);
+.sidebar-nav .logo {
+    width: 120px;
 }
 
-.menu ul {
+.sidebar-nav .logo img {
     width: 100%;
 }
 
-.menu ul li img {
-    width: 24px;
+.sidebar-nav ul {
+    list-style: none;
 }
 
-.menu ul li {
-    padding: 5px;
+.sidebar-nav ul li {
+    padding: 10px 20px;
 }
 
-.menu ul li a {
+.sidebar-nav ul li a:hover {
+    color: #fff;
+}
+
+.sidebar-nav ul li a{
     text-decoration: none;
-    color: gray;
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-.menu ul * {
+.sidebar-nav ul li a i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.library:after {
+    content: '+';
+    float: right;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 15px;
+}
+
+.create-playlist {
+    background: #302f2f;
+    padding: 30px 15px; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-scroll {
+    height: 120px;
+    overflow-y: auto;
+}
+
+.sidebar-scroll::-webkit-scrollbar {
+    background: transparent;
+}
+
+.sidebar-scroll::-webkit-scrollbar-thumb {
+    background: transparent;
+    width: 10px;
+}
+
+.sidebar-scroll:hover::-webkit-scrollbar-thumb {
+    background: #5c5b5b;
+    width: 5px;
+}
+
+.create-playlist h4 {
+    color: #fff;
+    font-size: 15px;
+}
+.create-playlist p {
+    color: #fff;
+    font-size: 12px;
+    margin: 12px 0;
+}
+
+.create-playlist button {
+    padding: 8px 15px;
+    border: 0;
+    outline: 0;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.privacy ul li a {
+    text-decoration: none;
+    color: #818080;
+    font-size: 11px;
+    font-weight: 600;
+    margin: 0 6px;
+}
+
+.privacy ul li a:hover {
+    text-decoration: underline;
+    color: #bebcbc;
+}
+
+.privacy ul {
+    list-style: none;
+}
+.privacy ul li {
+    padding: 0 12px;
+    padding-bottom: 8px;
+}
+.privacy {
+    padding: 0 12px;
+    margin-top: 30px;
+}
+
+.lang-button{
+    padding: 20px 30px;
+}
+
+.lang-button button{
+    padding: 10px 30px;
+    background: transparent;
+    border: 0;
+    outline: none;
+    color: #ffffff;
+    border: 1px solid #818080;
+    border-radius: 20px;
+}
+
+.lang-button button:hover{
+    padding: 11px 31px;
+    border: 1px solid #fff;
+    cursor: pointer;;
+}
+
+.main-section {
+    margin-left: 300px;
+    background: #181818;
+}
+
+.main-section .top-nav {
+    margin: 20px 30px;
+    background: #030303;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.main-section .top-nav button{
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.main-section .top-nav .prev-btn button i{
+    color: #838181;
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.top-nav .login .SignUp-btn{
+     color: #838181;
+     font-size: 16px;
+     font-weight: 600;
+     margin-right: 25px;
+}
+
+.top-nav .login .SignUp-btn:hover{
+    color: #ffffff;
     cursor: pointer;
 }
 
-.menu ul li a span {
-    position: relative;
-    top:-5px;
-    left: 8px;
-}
-
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
-
-.menu li {
-    padding-left: 0 !important;
-}
-
-.playlists {
-    font-weight: 400 !important;
-}
-
-.playlists ul li a span {
-    left: 0px;
-}
-
-.current-song-cover img{
-    position: absolute;
-    width: 100%;
-    bottom: 120px;
-    left: 0;
-}
-
-.arrow-container {
-    background-color: #434343;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 15px;
-}
-
-.playlist-arrows {
-    display: flex;
-    align-items: center;
-}
-
-.playlist-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.right {
-    width: 100%;
-}
-
-.playlist-top-email {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #434343;
-    border-radius: 20px;
-    color:white;
-}
-
-.playlist-top-email .arrow-container {
-    background-color: #545354;
-}
-
-.playlist-top-email span {
-    padding: 0 20px 0 0;
-}
-
-.playlist-header {
-    padding: 20px;
-    background: rgb(239,239,238);
-background: linear-gradient(90deg, rgba(239,239,238,1) 0%, rgba(120,120,121,1) 100%);
-}
-
-.playlist-content {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    margin-top: 20px;
-}
-
-.playlist-cover img {
-    width: 250px;
-    height: 250px;
-    -webkit-box-shadow: 1px 2px 48px -2px rgba(0,0,0,0.67);
--moz-box-shadow: 1px 2px 48px -2px rgba(0,0,0,0.67);
-box-shadow: 1px 2px 48px -2px rgba(0,0,0,0.67);
-}
-
-.playlist-info {
-    color: white;
-    padding-left: 20px;
-}
-
-.playlist-public {
-    font-size: 12px;
-    font-weight: 600;
-    font-family: "AvenirLTStd-Black";
-}
-
-.playlist-title {
-    font-size: 86px;
-    font-weight: 1000;
-    margin-top: 10px;
-    font-family: "AvenirLTStd-Black";
-}
-
-.playlist-description {
+.top-nav .login .Login-btn{
+    color: #302f2f;
     font-size: 16px;
-    font-weight: 200;
-    margin-top: 28px;
-    color: #A9A9A9;
-    font-family: "AvenirLTStd-Black";
+    font-weight: 600;
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
 }
 
-.playlist-stats img {
-    position: relative;
-    top:6px;
-}
-
-.playlist-stats span {
-    color: #434343;
-}
-
-.playlist-stats span:first-of-type {
-    font-weight: 1000;
-    font-family: "AvenirLTStd-Black";
-}
-
-.playlist-buttons-left, .playlist-buttons-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.playlist-buttons {
-    display: flex;
-    justify-content: space-between;
-}
-
-.playlist-song-container {
-    height: 100vh;
-    background: rgb(95,95,96);
-    background: rgb(95,95,96);
-    background: rgb(18,18,18);
-background: linear-gradient(90deg, rgba(18,18,18,1) 0%, rgba(95,95,96,1) 25%, rgba(18,18,18,1) 100%);
-padding: 20px;
-}
-
-.playlist-buttons-resume-pause {
-    background-color: var(--goonify-color);
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.playlist-buttons-like, .playlist-buttons-download, .playlist-buttons-three-dots {
-    margin-left: 20px;
-}
-
-.playlist-buttons-order {
-    color:#A9A9A9;
-    position: relative;
-    top:-2px;
-    margin-left:20px;
-}
-
-.playlist-songs {
-    margin-top: 20px;
-}
-
-.playlist-songs table {
-    border-collapse: collapse;
-    width: 100%;
-}
-
-.playlist table tr td, .playlist-songs tr th {
-    padding: 10px;
-    color: #CACACA;
-}
-
-.playlist-songs tr th {
-    font-weight: 200;
-    font-size: 14px;
-    letter-spacing: 2px;
-    color:#CACACA;
-}
-
-.playlist-songs tr:first-of-type {
-    border-bottom: 1px solid #CACACA;
-}
-
-.playlist-songs table th {
-    text-align: left;
-}
-
-.song-image img {
-    width: 36px;
-    height: 36px;
-    padding-left: 15px;
-}
-
-.song-name, .footer-player-left-song-name {
-    font-weight: 400;
-    font-size: 14px;
-    color: white;
-}
-
-.song-name-artist {
-    padding-left: 15px;
-    letter-spacing: 0.5px;
-}
-
-.song-artist, .song-album, .song-date-added, tr td:first-of-type, .song-time, .footer-player-left-song-artist {
-    font-size: 14px;
-    margin-top: 6px;
-    color: #848485;
-}
-
-.song-artist {
-    margin-top: 3px;
-}
-
-.song-name {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-}
-
-.footer-player {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    /*background color: #1FD75F;*/
-    /*background-color: #A9A9A9;*/
-    background-color: #181918;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: var(--footer-height);
-}
-
-.footer-player-left-like {
-    padding-left: 30px;
-}
-
-.footer-player-left {
-    display: flex;
-    align-items: center;
-}
-
-.footer-player-left-like img {
-    width: 21px;
-    height: 21px;
-}
-
-.footer-player-middle {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.footer-player-middle-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.footer-player-middle-buttons img {
-    width: 15px;
-    padding: 15px;
-}
-
-.pause {
-    position: relative;
-    display: inline-block;
-    width: 36px !important;
-    height: 36px !important;
-    background-color: var(--goonify-color) !important;
-    border-radius: 50%;
-    margin: 0 8px;
-    top: 4px;
-}
-
-.pause img {
-    position: relative;
-    max-width: 24px !important;
-    max-height: 24px !important;
-    filter: none !important;
-    left: -4px;
-    top: -4px;
-}
-
-.player-slider input {
-    -webkit-appearance: var(--goonify-color);
-    appearance: var(--goonify-color);
-    width: 40vh;
-    height: 5px;
-    background-color: gray;
-    border-radius: 5px;
-    position: relative;
-    border: none;
-}
-
-.footer-player-middle-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.player-time {
-    padding: 0 10px;
-    color: #CACACA;
-}
-
-.footer-player-right input {
-    width: 80px;
-    position: relative;
-    margin-right: 10px;
-    top: -3px;
-}
-
-.footer-player-right-buttons {
-    display: flex;
-    flex-direction: row;
-    margin-right: 30px;
-}
-
-.footer-player-right-buttons img {
-    width: 16px;
-    height: 16px;
-    margin-right: 16px;
+.top-nav .login .Login-btn:hover{
+   background: #f3f3f3;
+   cursor: pointer;
 }
