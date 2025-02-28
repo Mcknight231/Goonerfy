@@ -1,207 +1,644 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    outline: none;
+    text-decoration: none;
 }
 
 body {
-    background: #000;
-    font-family: Arial, Helvetica, sans-serif;
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .sidebar {
-    width: 300px;
-    background: #030303;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
+  width: 300px;
+  background: #030303;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
 }
 
 .sidebar-nav {
-    background: #111111;
-    border-radius: 10px;
-    padding: 20px 10px;
-    margin-bottom: 10px;
+  background: #111111;
+  border-radius: 10px;
+  padding: 20px 10px;
+  margin-bottom: 10px;
 }
 
 .sidebar-nav .logo {
-    width: 120px;
+  width: 120px;
+}
+
+.sidebar-nav .logo:hover {
+  cursor: pointer;
 }
 
 .sidebar-nav .logo img {
-    width: 100%;
+  width: 100%;
 }
 
 .sidebar-nav ul {
-    list-style: none;
+  list-style: none;
 }
 
 .sidebar-nav ul li {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 .sidebar-nav ul li a:hover {
-    color: #fff;
+  color: #fff;
 }
 
-.sidebar-nav ul li a{
-    text-decoration: none;
-    color: #b3b3b3;
-    font-size: 16px;
-    font-weight: 600;
+.sidebar-nav ul li a {
+  text-decoration: none;
+  color: #b3b3b3;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .sidebar-nav ul li a i {
-    font-size: 20px;
-    margin-right: 10px;
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 .library:after {
-    content: '+';
-    float: right;
-    text-align: center;
-    border-radius: 50%;
-    font-size: 15px;
+  content: "+";
+  float: right;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 15px;
 }
 
 .create-playlist {
-    background: #302f2f;
-    padding: 30px 15px; 
-    border-radius: 10px;
-    margin-bottom: 10px;
+  background: #302f2f;
+  padding: 30px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .sidebar-scroll {
-    height: 120px;
-    overflow-y: auto;
+  height: 120px;
+  overflow-y: auto;
 }
 
 .sidebar-scroll::-webkit-scrollbar {
-    background: transparent;
+  background: transparent;
 }
 
 .sidebar-scroll::-webkit-scrollbar-thumb {
-    background: transparent;
-    width: 10px;
+  background: transparent;
+  width: 10px;
 }
 
 .sidebar-scroll:hover::-webkit-scrollbar-thumb {
-    background: #5c5b5b;
-    width: 5px;
+  background: #5c5b5b;
+  width: 5px;
 }
 
 .create-playlist h4 {
-    color: #fff;
-    font-size: 15px;
+  color: #fff;
+  font-size: 15px;
 }
 .create-playlist p {
-    color: #fff;
-    font-size: 12px;
-    margin: 12px 0;
+  color: #fff;
+  font-size: 12px;
+  margin: 12px 0;
 }
 
 .create-playlist button {
-    padding: 8px 15px;
-    border: 0;
-    outline: 0;
-    border-radius: 20px;
-    font-weight: 600;
-    margin-bottom: 10px;
+  padding: 8px 15px;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.create-playlist button {
+  cursor: pointer;
 }
 
 .privacy ul li a {
-    text-decoration: none;
-    color: #818080;
-    font-size: 11px;
-    font-weight: 600;
-    margin: 0 6px;
+  text-decoration: none;
+  color: #818080;
+  font-size: 11px;
+  font-weight: 600;
+  margin: 0 6px;
 }
 
 .privacy ul li a:hover {
-    text-decoration: underline;
-    color: #bebcbc;
+  text-decoration: underline;
+  color: #bebcbc;
 }
 
 .privacy ul {
-    list-style: none;
+  list-style: none;
+  margin-top: 10px;
 }
 .privacy ul li {
-    padding: 0 12px;
-    padding-bottom: 8px;
+  padding: 0 12px;
+  padding-bottom: 8px;
 }
 .privacy {
-    padding: 0 12px;
-    margin-top: 30px;
+  padding: 0 12px;
+  margin-top: 30px;
 }
 
-.lang-button{
-    padding: 20px 30px;
+.lang-button {
+  padding: 20px 30px;
 }
 
-.lang-button button{
-    padding: 10px 30px;
-    background: transparent;
-    border: 0;
-    outline: none;
-    color: #ffffff;
-    border: 1px solid #818080;
-    border-radius: 20px;
+.lang-button button {
+  padding: 10px 30px;
+  background: transparent;
+  border: 0;
+  outline: none;
+  color: #ffffff;
+  border: 1px solid #818080;
+  border-radius: 20px;
+  margin: 10px 0;
 }
 
-.lang-button button:hover{
-    padding: 11px 31px;
-    border: 1px solid #fff;
-    cursor: pointer;;
+.lang-button button:hover {
+  padding: 11px 31px;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
 
 .main-section {
-    margin-left: 300px;
-    background: #181818;
+  margin-left: 300px;
+  background: #181818;
+  height: 100vh;
+  overflow-y: auto;
+  margin-bottom: 80px;
+}
+
+.main-section::-webkit-scrollbar {
+  background: transparent;
+}
+
+.main-section::-webkit-scrollbar-thumb {
+  background: transparent;
+  width: 10px;
+}
+
+.main-section:hover::-webkit-scrollbar-thumb {
+  background: #5c5b5b;
+  width: 5px;
 }
 
 .main-section .top-nav {
-    margin: 20px 30px;
-    background: #030303;
+  margin: 20px 30px;
+  background: #030303;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-section .top-nav button {
+  background: transparent;
+  border: 0;
+  outline: 0;
+}
+
+.main-section .top-nav .prev-btn button i {
+  color: #838181;
+  font-size: 22px;
+  margin-right: 20px;
+}
+
+.top-nav .login .SignUp-btn {
+  color: #838181;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 25px;
+}
+
+.top-nav .login .SignUp-btn:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.top-nav .login .Login-btn {
+  color: #302f2f;
+  font-size: 16px;
+  font-weight: 600;
+  background: #fff;
+  padding: 10px 15px;
+  border-radius: 20px;
+}
+
+.top-nav .login .Login-btn:hover {
+  background: #f3f3f3;
+  cursor: pointer;
+}
+
+.spotify-playlist {
+  padding: 20px 40px;
+}
+
+.spotify-playlist h2 {
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.spotify-playlist .card {
+  display: flex;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.spotify-playlist .card .item {
+  width: 160px;
+  min-width: 140px;
+  background-color: #181818;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 15px;
+}
+
+.spotify-playlist .card .item:hover {
+  background: #3d3d3c;
+}
+
+.spotify-playlist .card .item img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.spotify-playlist .item h4 {
+  color: #fff;
+}
+
+.spotify-playlist .item h4:hover {
+  text-decoration: underline;
+}
+
+.spotify-playlist .item p {
+  color: #838181;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.spotify-playlist .item p:hover {
+  text-decoration: underline;
+}
+
+.spotify-playlist .play-btn {
+  position: relative;
+}
+
+.spotify-playlist .play-btn i {
+  position: absolute;
+  background-color: #50ebff;
+  border-radius: 50%;
+  padding: 10px;
+  right: 8px;
+  top: -40px;
+  opacity: 0;
+  transform: 0.3s ease all;
+}
+
+.spotify-playlist .card .item:hover .play-btn i {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+
+.footer-section {
+  padding: 20px 40px;
+}
+
+.footer-section .footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.footer-section .footer .footer-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.footer-section .footer .footer-links .footer-column {
+  margin: 0 12px;
+}
+
+.footer-section .footer .foooter-links div {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.footer-section .footer .footer-links ul li {
+  list-style: none;
+  margin: 0 6px;
+}
+
+.footer-section .footer .footer-links ul li a {
+  text-decoration: none;
+  color: #969393;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-section .footer .footer-links ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer .socials-links i {
+  color: #fff;
+  background: #353535;
+  padding: 12px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.footer .socials-links i:hover {
+  background: #636262;
+}
+
+hr {
+  margin: 20px 40px;
+  background: #272626;
+  border: 0;
+  outline: 0;
+  border: 1px solid #575656;
+}
+
+.copyright {
+  padding: 0 40px;
+  color: #969393;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.preview {
+  display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right, #ae2896, #509bf5);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 40px;
+}
+
+.preview h4 {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.preview p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.preview button {
+  padding: 12px 30px;
+  border: 0;
+  outline: 0;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.preview button:hover {
+  background: #fff;
+  cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+    background-color: #333;
+    padding: 3rem 8%;
+    min-height: 100vh;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+}
+
+.wrapper .header {
+    padding: 1.5rem 8%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.wrapper .header {
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
 }
 
-.main-section .top-nav button{
-    background: transparent;
-    border: 0;
-    outline: 0;
+.wrapper .header .logo {
+    width: fit-content;
+    height: 100%;
+    object-fit: cover;
 }
 
-.main-section .top-nav .prev-btn button i{
-    color: #838181;
-    font-size: 22px;
-    margin-right: 20px;
+.wrapper .login-box {
+    width: 100%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    max-width: 300px;
+    max-width: 600px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
 }
 
-.top-nav .login .SignUp-btn{
-     color: #838181;
-     font-size: 16px;
-     font-weight: 600;
-     margin-right: 25px;
+.wrapper .login-box .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
 }
 
-.top-nav .login .SignUp-btn:hover{
-    color: #ffffff;
+.wrapper .login-box .heading h1{
+    font-size: 32px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+}
+
+.wrapper .login-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    max-width: 600px;
+    max-width: 350px;
+    max-width: 600px;
+    min-height: 500px;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.wrapper .login-box .continue {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0rem;
+    border-bottom: 1px solid #444;
+}
+
+.wrapper .login-box .continue .continue-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    border: 1px solid #aaa;
+    border-radius: 2rem;
+    padding: 0.66rem 3rem;
     cursor: pointer;
 }
 
-.top-nav .login .Login-btn{
-    color: #302f2f;
+.wrapper .login-box .continue .continue-box i{
     font-size: 16px;
-    font-weight: 600;
-    background: #fff;
-    padding: 10px 15px;
-    border-radius: 20px;
+    color: #eee;
+
 }
 
-.top-nav .login .Login-btn:hover{
-   background: #f3f3f3;
-   cursor: pointer;
+.wrapper .login-box .continue .continue-box strong{
+    width: 200px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #aaa;
+
+}
+
+.wrapper .login-box .continue .continue-box:hover i,
+.wrapper .login-box .continue .continue-box:hover strong{
+color: #fff;
+}
+
+.wrapper .login-box form {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.wrapper .login-box form .box-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.wrapper .login-box form .box-form label{
+    font-size: 14px;
+    color: #aaa;
+}
+
+.wrapper .login-box form .box-form input{
+    background-color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    border: 1px solid #aaa;
+    padding: 0.5rem 1rem;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.remember label{
+    font-size: 14px;
+    font-weight: 400;
+    color: #eee;
+    padding-bottom: 3px;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.box-btn {
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-btn .btn-login{
+    width: 10;
+    padding: 0.6rem 0rem;
+    padding-bottom: 0.6rem;
+    background-color: #000;
+    border: 1px solid #aaa;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    text-transform: capitalize;
+}
+
+.box-btn .btn-login:hover{
+    border-top: 1px solid #fff;
+}
+
+.forgot {
+    padding: 0.25rem 0rem;
+}
+
+.forgot a{
+    font-size: 16px;
+    font-weight: 400;
+    color:#eee;
+}
+
+.forgot a:hover{
+    color:#eee;
+    text-decoration: underline;
+}
+
+.account {
+    padding: 0.25rem 0rem;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color:#fff;
+}
+
+.account a{
+    font-size: 16px;
+    font-weight: 600;
+    color:#fff;
+    letter-spacing: -0px;
+    text-decoration: underline;
+}
+
+.account a:hover{
+    color:#c3b5ff;
 }
