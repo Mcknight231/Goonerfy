@@ -12,12 +12,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Signika+Negative:wght@300..700&display=swap");
+    </style>
+    <script src="script.js" defer></script>
     <title>Goonerfy</title>
   </head>
   <body>
     <div class="sidebar">
       <div class="sidebar-nav">
-        <div class="logo"><img src="assets/Spotify-Logo.png""></div>
+        <div class="logo">
+          <img
+            src="https://storage.googleapis.com/pr-newsroom-wp/1/2021/02/Spotify_Logo_RGB_White.png"
+          />
+        </div>
 
         <ul>
           <li>
@@ -113,7 +123,9 @@
               alt=""
             />
             <div class="play-btn">
-              <span><i class="fa-solid fa-play"></i></span>
+              <span onclick="audioClick();" autostart="false"
+                ><i class="fa-solid fa-play"></i
+              ></span>
             </div>
             <h4>More Chaos</h4>
             <p>Ken Carson</p>
@@ -208,6 +220,70 @@
             </div>
             <h4>My Beautiful Dark Twisted Fantasy</h4>
             <p>Kanye West</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="player">
+          <div class="player-top">
+            <button class="player-btn" type="button">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <span>Goonerfy Music App</span>
+            <button class="player-btn" type="button">
+              <i class="fa-solid fa-ellipsis"></i>
+            </button>
+          </div>
+          <div class="player-body">
+            <div class="current-song">
+              <div class="cover">
+                <img src="https://i.scdn.co/image/ab67616d00001e028940ac99f49e44f59e6f7fb3" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="song-info">
+            <div class="song-details">
+              <span class="song-name">I Ain't Got Time!</span>
+              <span class="song-artist">Tyler, The Creator</span>
+            </div>
+            <i class="fa-solid fa-heart"></i>
+          </div>
+          <div class="song-duration">
+            <div class="song-time">
+              <div class="song-progress">
+                <audio
+                  src= "music/Tyler, The Creator - I Ain't Got Time!.mp3";
+                  class="audio"
+                ></audio>
+              </div>
+            </div>
+            <div class="time">
+              <span>0:00</span>
+              <span>0:00</span>
+            </div>
+          </div>
+          <div class="controls">
+            <button class="player-btn" type="button">
+              <i class="fa-solid fa-shuffle"></i>
+            </button>
+            <button class="player-btn prev-btn" type="button">
+              <i class="fa-solid fa-backward"></i>
+            </button>
+            <button class="player-btn play-pause" type="button">
+              <i class="fa-solid fa-play"></i>
+            </button>
+            <button class="player-btn next-btn" type="button">
+              <i class="fa-solid fa-forward"></i>
+            </button>
+            <button class="player-btn repeat-btn" type="button">
+              <i class="fa-solid fa-repeat"></i>
+            </button>
+          </div>
+          <div class="player-footer">
+            <i class="fa-solid fa-music"></i>
+            <span>Listen to Goonerfy Music</span>
+            <i class="fa-solid fa-list"></i>
           </div>
         </div>
       </div>

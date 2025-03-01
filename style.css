@@ -1,11 +1,223 @@
 * {
   box-sizing: border-box;
-    padding: 0px;
-    margin: 0px;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    outline: none;
-    text-decoration: none;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana,
+    sans-serif "Signika Relative";
+  outline: none;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(#313131, #151515);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player {
+  width: 35rem;
+  height: 50rem;
+  background: linear-gradient(to right, #313234, #2f3031);
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.4);
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+}
+
+.player-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.player-btn {
+  width: 4rem;
+  height: 4rem;
+  border: 0.2rem solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  background-color: #2b2c2e;
+  color: #a8a9ab;
+  box-shadow: 0.5rem 0.5rem 2rem -0.1rem rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.player-btn:active {
+  transform: translateY(0.2rem);
+}
+
+.player-top span {
+  font-size: 1.3rem;
+  color: #a8a9ab;
+}
+
+.player-body {
+  width: 100%;
+  height: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-song {
+  width: 18rem;
+  height: 18rem;
+  border: 0.5rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  box-shadow: 0.6rem 0.6rem 4rem -0.1rem rgba(0, 0, 0, 0.9);
+  position: relative;
+  transform: rotateZ(-15deg);
+}
+
+.rotate {
+  animation: coverRotate 10s linear infinite;
+}
+
+@keyframes coverRotate {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+.cover {
+  width: 100%;
+  height: 100%;
+  background-color: #101112;
+  border-radius: 50%;
+}
+
+.cover img {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.cover span {
+  font-family: "Delicious Handrawn" cursive;
+  position: absolute;
+  display: block;
+}
+
+.cover span:nth-child(1) {
+  color: #ddd;
+  font-size: 1.6rem;
+  top: 20%;
+  left: 30%;
+}
+
+.cover span:nth-child(2) {
+  color: #fff;
+  font-size: 2.5rem;
+  top: 35%;
+  left: 20%;
+  width: 10rem;
+  text-align: center;
+}
+
+.song-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-name {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.song-artist {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #a8a9ab;
+}
+
+.song-info i {
+  font-size: 2rem;
+  background: linear-gradient(to right, #3b9daa, #46b9c9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.song-time {
+  width: 100%;
+  height: 0.5rem;
+  background: #0c0c0d;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  position: relative;
+}
+
+.song-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to right, #3b9daa, #46b9c9);
+  border-radius: 0.5rem;
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+.time span {
+  font-size: 1.2rem;
+  color: #a8a9ab;
+}
+
+.controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.play-pause {
+  width: 5rem;
+  height: 5rem;
+  background: linear-gradient(to right, #3b9daa, #46b9c9);
+  color: #fff;
+  box-sizing: 0.5rem 0.5rem 2rem -0.1rem rgba(255, 255, 255, 0.8);
+}
+
+.player-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.player-footer i {
+  font-size: 1.8rem;
+  color: #a8a9ab;
+}
+
+.player-footer span {
+  font-size: 1.2rem;
+  color: #a8a9ab;
 }
 
 body {
@@ -328,6 +540,10 @@ body {
 
 .footer-section .footer .footer-links .footer-column {
   margin: 0 12px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 12px;
+  font-size: 16px;
 }
 
 .footer-section .footer .foooter-links div {
@@ -422,223 +638,221 @@ hr {
 }
 
 .wrapper {
-    position: relative;
-    background-color: #333;
-    padding: 3rem 8%;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  background-color: #333;
+  padding: 3rem 8%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper .header {
-    padding: 1.5rem 8%;
-    position: absolute;
-    display: flex;
-    top: 0;
-    left: 0;
-    right: 0;
+  padding: 1.5rem 8%;
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .wrapper .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #111;
-    color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  color: #fff;
 }
 
 .wrapper .header .logo {
-    width: fit-content;
-    height: 100%;
-    object-fit: cover;
+  width: fit-content;
+  height: 100%;
+  object-fit: cover;
 }
 
 .wrapper .login-box {
-    width: 100%;
-    padding: 2rem 1rem;
-    max-width: 800px;
-    max-width: 300px;
-    max-width: 600px;
-    min-height: 500px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #000;
-    color: #fff;
+  width: 100%;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  max-width: 300px;
+  max-width: 600px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
 }
 
 .wrapper .login-box .heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
-.wrapper .login-box .heading h1{
-    font-size: 32px;
-    font-weight: 300;
-    color: #fff;
-    text-align: center;
+.wrapper .login-box .heading h1 {
+  font-size: 32px;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
 }
 
 .wrapper .login-form {
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-    max-width: 600px;
-    max-width: 350px;
-    max-width: 600px;
-    min-height: 500px;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  max-width: 600px;
+  max-width: 350px;
+  max-width: 600px;
+  min-height: 500px;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
 }
 
 .wrapper .login-box .continue {
-    width: 100%;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 0rem;
-    border-bottom: 1px solid #444;
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0rem;
+  border-bottom: 1px solid #444;
 }
 
-.wrapper .login-box .continue .continue-box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 100%;
-    border: 1px solid #aaa;
-    border-radius: 2rem;
-    padding: 0.66rem 3rem;
-    cursor: pointer;
+.wrapper .login-box .continue .continue-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 2rem;
+  padding: 0.66rem 3rem;
+  cursor: pointer;
 }
 
-.wrapper .login-box .continue .continue-box i{
-    font-size: 16px;
-    color: #eee;
-
+.wrapper .login-box .continue .continue-box i {
+  font-size: 16px;
+  color: #eee;
 }
 
-.wrapper .login-box .continue .continue-box strong{
-    width: 200px;
-    font-size: 18px;
-    font-weight: 400;
-    color: #aaa;
-
+.wrapper .login-box .continue .continue-box strong {
+  width: 200px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #aaa;
 }
 
 .wrapper .login-box .continue .continue-box:hover i,
-.wrapper .login-box .continue .continue-box:hover strong{
-color: #fff;
+.wrapper .login-box .continue .continue-box:hover strong {
+  color: #fff;
 }
 
 .wrapper .login-box form {
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.wrapper .login-box form .box-form{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+.wrapper .login-box form .box-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.wrapper .login-box form .box-form label{
-    font-size: 14px;
-    color: #aaa;
+.wrapper .login-box form .box-form label {
+  font-size: 14px;
+  color: #aaa;
 }
 
-.wrapper .login-box form .box-form input{
-    background-color: #111;
-    font-size: 16px;
-    font-weight: 500;
-    color: #fff;
-    border: 1px solid #aaa;
-    padding: 0.5rem 1rem;
+.wrapper .login-box form .box-form input {
+  background-color: #111;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  border: 1px solid #aaa;
+  padding: 0.5rem 1rem;
 }
 
 .remember {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
-.remember label{
-    font-size: 14px;
-    font-weight: 400;
-    color: #eee;
-    padding-bottom: 3px;
-    text-transform: capitalize;
-    cursor: pointer;
+.remember label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #eee;
+  padding-bottom: 3px;
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
 .box-btn {
-    padding: 1rem 0rem;
-    border-bottom: 1px solid #444;
-    display: flex;
-    flex-direction: column;
+  padding: 1rem 0rem;
+  border-bottom: 1px solid #444;
+  display: flex;
+  flex-direction: column;
 }
 
-.box-btn .btn-login{
-    width: 10;
-    padding: 0.6rem 0rem;
-    padding-bottom: 0.6rem;
-    background-color: #000;
-    border: 1px solid #aaa;
-    color: #fff;
-    cursor: pointer;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 300;
-    letter-spacing: 3px;
-    text-transform: capitalize;
+.box-btn .btn-login {
+  width: 10;
+  padding: 0.6rem 0rem;
+  padding-bottom: 0.6rem;
+  background-color: #000;
+  border: 1px solid #aaa;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-transform: capitalize;
 }
 
-.box-btn .btn-login:hover{
-    border-top: 1px solid #fff;
+.box-btn .btn-login:hover {
+  border-top: 1px solid #fff;
 }
 
 .forgot {
-    padding: 0.25rem 0rem;
+  padding: 0.25rem 0rem;
 }
 
-.forgot a{
-    font-size: 16px;
-    font-weight: 400;
-    color:#eee;
+.forgot a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #eee;
 }
 
-.forgot a:hover{
-    color:#eee;
-    text-decoration: underline;
+.forgot a:hover {
+  color: #eee;
+  text-decoration: underline;
 }
 
 .account {
-    padding: 0.25rem 0rem;
-    font-size: 16px;
-    font-weight: 400;
-    letter-spacing: 4px;
-    color:#fff;
+  padding: 0.25rem 0rem;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  color: #fff;
 }
 
-.account a{
-    font-size: 16px;
-    font-weight: 600;
-    color:#fff;
-    letter-spacing: -0px;
-    text-decoration: underline;
+.account a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: -0px;
+  text-decoration: underline;
 }
 
-.account a:hover{
-    color:#c3b5ff;
+.account a:hover {
+  color: #c3b5ff;
 }
