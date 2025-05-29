@@ -22,7 +22,7 @@ header {
   flex-wrap: wrap;
 }
 
-header .menu-side, 
+header .menu-side,
 .song-side {
   width: 25%;
   height: 90%;
@@ -46,6 +46,118 @@ header .menu-side h1 {
   font-size: 20px;
   margin: 15px 0 0 20px;
   font-weight: 500;
+}
+
+header .menu-side .playlist {
+  margin: 40px 0 0 20px;
+}
+
+header .menu-side .playlist h4 {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 10px;
+  color: #FFF;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: .3s linear;
+}
+
+header .menu-side .playlist h4:hover {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+header .menu-side .playlist h4 span {
+  position: relative;
+  margin-right: 35px;
+}
+
+header .menu-side .playlist h4 span::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border: 2px solid #4C5262;
+  border-radius: 50%;
+  top: -4px;
+  transition: .3s linear;
+}
+
+header .menu-side .playlist h4:hover span::before {
+  border: 2px solid #FFF;
+}
+
+header .menu-side .playlist h4 .bi {
+  display: none;
+}
+
+header .menu-side .playlist .active {
+  color: #36E2EC;
+}
+
+header .menu-side .playlist .active span {
+  display: none;
+}
+
+header .menu-side .playlist .active .bi {
+  display: flex;
+  margin-right: 20px;
+}
+
+header .menu-side .menu-song {
+  width: 170%;
+  height: 430px;
+  /*border: 1px solid #FFF;*/
+  margin-top: 40px;
+  overflow: auto;
+}
+
+header .menu-side .menu-song li {
+  list-style-type: none;
+  position: relative;
+  padding: 5px 0 5px 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+header .menu-side .menu-song li:hover {
+  background-color: rgba(105, 105, 105, .1);
+}
+
+header .menu-side .menu-song li span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #4C5262;
+}
+
+header .menu-side .menu-song li img {
+  width: 32px;
+  height: 32px;
+  margin-left: 25px;
+}
+
+header .menu-side .menu-song li h5 {
+  font-size: 14px;
+  margin-left: 15px;
+  width: 170px;
+  border: 1px solid #FFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+header .menu-side .menu-song li h5 .subtitle {
+  font-size: 12px;
+  color: #d1d0d0;
+}
+
+header .menu-side .menu-song li h5 .bi {
+  position: absolute;
+  right: 15px;
+  font-size: 16px;
 }
 
 .player {
