@@ -107,10 +107,109 @@ header .menu-side .playlist .active .bi {
 
 header .menu-side .menu-song {
   width: 170%;
-  height: 430px;
+  height: 420px;
   /*border: 1px solid #FFF;*/
   margin-top: 40px;
   overflow: auto;
+}
+
+header .menu-side .menu-song::-webkit-scrollbar {
+  display: none;
+}
+
+header .master-play {
+  display: flex;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+header .master-play .wave {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #FFF;
+  padding-bottom: 5px;
+  display: flex;
+  align-items: flex-end;
+  margin-right: 10px;
+}
+
+header .master-play .wave .wave1 {
+  width: 3px;
+  height: 10px;
+  background-color: #36E2EC;
+  margin-right: 3px;
+  border-radius: 10px 10px 0px 0px;
+  /*animation: wave .5s linear infinite;*/
+}
+
+header .master-play .wave .wave1:nth-child(2) {
+  height: 13px;
+  margin-right: 3.5px;
+  animation-delay: .4s;
+}
+
+header .master-play .wave .wave1:nth-child(3) {
+  height: 8px;
+  animation-delay: .8s;
+}
+
+/*JS Scripts*/
+
+header .master-play .active1 .wave1 {
+  animation: wave .5s linear infinite;
+}
+
+header .master-play .active1 .wave1:nth-child(2) {
+  animation-delay: .4s;
+}
+
+header .master-play .active1 .wave:nth-child(3) {
+  animation-delay: .8s;
+}
+
+@keyframes wave {
+  0% {
+    height: 10px;
+  }
+
+  50% {
+    height: 15px;
+  }
+
+  100% {
+    height: 20px;
+  }
+}
+
+header .master-play img {
+  width: 35px;
+  height: 35px;
+}
+
+header .master-play h5 {
+  width: 130px;
+  border: 1px solid #FFF;
+  color: #FFF;
+  line-height: 17px;
+  overflow: hidden;
+  text-transform: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+header .master-play h5 .subtitle {
+  font-size: 11px;
+  color: #dfdede;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+header .master-play .icon {
+  font-size: 20px;
+  color: #FFF;
+  margin: 0px 20px 0px 40px;
 }
 
 header .menu-side .menu-song li {
@@ -375,4 +474,16 @@ p {
 
 .stroke:nth-child(7) {
   animation-delay: 0s;
+}
+
+@media (max-width: 799px) {
+  .wave {
+    display: none;
+  }
+
+  header,
+  .menu-side {
+    width: 100%;
+    height: 100%;
+  }
 }
