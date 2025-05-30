@@ -326,6 +326,7 @@ header .master-play .vol input {
   left: 64vh;
   cursor: pointer;
   z-index: 999999999999999999999;
+  opacity: 0;
 }
 
 header .menu-side .menu-song li {
