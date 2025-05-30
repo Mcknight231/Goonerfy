@@ -210,6 +210,122 @@ header .master-play .icon {
   font-size: 20px;
   color: #FFF;
   margin: 0px 20px 0px 40px;
+  outline: none;
+  align-items: center;
+}
+
+header .master-play .icon .bi {
+  cursor: pointer;
+  outline: none;
+}
+
+header .master-play .icon .shuffle {
+  font-size: 17px;
+  margin-right: 10px;
+  width: 18px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+header .master-play .icon #download {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+header .master-play .bi:nth-child(3) {
+  border: 1px solid rgba(105, 105, 105, .1);
+  border-radius: 50%;
+  padding: 1px 5px 0px 7px;
+  margin: 0px 5px;
+}
+
+header .master-play span {
+  font-size: 11px;
+  color: #FFF;
+  /*border: 1px solid #FFF;*/
+  width: 32px;
+  font-weight: 400;
+}
+
+header .master-play #current-start {
+  margin: 0px 0px 0px 20px;
+}
+
+header .master-play .bar {
+  position: relative;
+  width: 43%;
+  height: 2px;
+  background: rgba(105, 105, 170, .1);
+  margin: 0px 15px 0px 10px;
+}
+
+header .master-play .bar .bar2 {
+  position: absolute;
+  background: #36E2EC;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  transition: 1s linear;
+}
+
+header .master-play .bar .dot {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #36E2EC;
+  border-radius: 50%;
+  left: 0%;
+  top: -1.5px;
+  transition: 1s linear;
+}
+
+header .master-play .bar .dot::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #36E2EC;
+  border-radius: 50%;
+  left: -7px;
+  top: -6.5px;
+  box-shadow: inset 0px 0px 3px #36E2EC;
+}
+
+header .master-play .bar input {
+  position: absolute;
+  width: 100%;
+  top: -7px;
+  left: 0;
+  cursor: pointer;
+  z-index: 999999999999999999999;
+  /*transition: 3s linear;*/
+  opacity: 0;
+}
+
+header .master-play .bar input {
+  position: relative;
+  width: 100px;
+  height: 2px;
+  background: rgba(105, 105, 170, .1);
+  margin-left: 50px;
+}
+
+header .master-play .vol .fa {
+  position: absolute;
+  color: #FFF;
+  font-size: 25px;
+  top: 87vh;
+  left: 64vh;
+}
+
+header .master-play .vol input {
+  position: absolute;
+  width: 100%;
+  top: 87vh;
+  left: 64vh;
+  cursor: pointer;
+  z-index: 999999999999999999999;
 }
 
 header .menu-side .menu-song li {
